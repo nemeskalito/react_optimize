@@ -8,8 +8,8 @@ const CounterButton = ({ count, setCount }) => {
   }, [setCount]);
   return (
     <div>
-      <p>{count}</p>
       <button onClick={handleClick}>+++</button>
+      <p>{count}</p>
     </div>
   );
 };

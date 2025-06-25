@@ -106,7 +106,7 @@ function App() {
   return (
     <>
       <CounterButton count={count} setCount={setCount} />
-      <SearchInput search={search} setSearch={setSearch} />
+      <SearchInput setSearch={setSearch} />
       <ItemList array={array} search={search} />
     </>
   );
