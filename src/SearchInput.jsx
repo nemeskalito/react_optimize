@@ -1,16 +1,16 @@
-import { useCallback, useRef } from "react";
+import React, { useCallback, useRef } from 'react'
 
-import "./App.css";
-const SearchInput = ({ setSearch }) => {
-  const searchItem = useRef();
-  const searchInList = useCallback(() => {
-    setSearch(searchItem.current.value);
-  }, [setSearch]);
-  return (
-    <div>
-      <input ref={searchItem} type="text" onChange={searchInList} />
-    </div>
-  );
-};
+import './App.css'
+const SearchInput = React.memo(({ setSearch }) => {
+	const searchInput = e => {
+		setSearch(e.target.value)
+	}
 
-export default SearchInput;
+	return (
+		<div>
+			<input type='text' onChange={searchInput} />
+		</div>
+	)
+})
+
+export default SearchInput
