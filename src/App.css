@@ -1,25 +1,40 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+	a:nth-of-type(2) .logo {
+		animation: logo-spin infinite 20s linear;
+	}
 }
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	list-style: none;
+	padding: 0;
 }
 
 .list li {
-  flex: 1 0 200px; /* Минимальная ширина 200px */
-  max-width: 100%;
+	flex: 1 0 200px; /* Минимальная ширина 200px */
+	max-width: 100%;
+}
+
+.dark {
+	background-color: #23272f;
+}
+.dark p button {
+	background-color: white;
+	color: white;
+}
+
+.light {
+	background-color: white;
+}
+.light p {
+	color: black;
 }
