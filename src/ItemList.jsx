@@ -1,19 +1,22 @@
-import React, { useMemo } from 'react'
+import React, { useContext, useMemo } from "react";
 
-import './App.css'
+import "./App.css";
+import { ThemeContext } from "./App";
 
 const ItemList = ({ array, search }) => {
-	const filterItems = useMemo(() => {
-		if (!search) return []
-		return array.filter(item => item.includes(search))
-	}, [array, search])
-	return (
-		<ul className='list'>
-			{filterItems.map((item, index) => {
-				return <li key={index}>{item}</li>
-			})}
-		</ul>
-	)
-}
+  const { isDark } = useContext(ThemeContext);
 
-export default ItemList
+  const filterItems = useMemo(() => {
+    if (!search) return [];
+    return array.filter((item) => item.includes(search));
+  }, [array, search]);
+  return (
+    <ul className={`list ${isDark ? "dark" : "light"}`}>
+      {filterItems.map((item, index) => {
+        return <li key={index}>{item}</li>;
+      })}
+    </ul>
+  );
+};
+
+export default ItemList;

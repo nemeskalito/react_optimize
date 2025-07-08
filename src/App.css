@@ -1,40 +1,66 @@
 #root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 20px;
-	text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	a:nth-of-type(2) .logo {
-		animation: logo-spin infinite 20s linear;
-	}
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
 .list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-	list-style: none;
-	padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
 }
 
 .list li {
-	flex: 1 0 200px; /* Минимальная ширина 200px */
-	max-width: 100%;
+  flex: 1 0 200px; /* Минимальная ширина 200px */
+  max-width: 100%;
 }
 
 .dark {
-	background-color: #23272f;
+  background-color: #23272f;
 }
-.dark p button {
-	background-color: white;
-	color: white;
+.dark img {
+  border: 0.5px solid white;
+  border-radius: 5px;
 }
-
+.dark p {
+  color: white;
+}
+.dark button {
+  background-color: white;
+  color: #23272f;
+}
+.dark input {
+  background-color: white;
+  color: #23272f;
+}
+.dark li {
+  color: #23272f;
+}
 .light {
-	background-color: white;
+  background-color: white;
 }
 .light p {
-	color: black;
+  color: #23272f;
+}
+.light img {
+  border: 0.5px solid #23272f;
+  border-radius: 5px;
+}
+.light button {
+  background-color: #23272f;
+  color: white;
+}
+.light input {
+  background-color: #23272f;
+  color: white;
+}
+.dark li {
+  color: white;
 }
